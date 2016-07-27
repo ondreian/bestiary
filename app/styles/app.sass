@@ -1,0 +1,80 @@
+@import "bulma"
+
+$font-main   : 'Amiri', serif
+$font-accent : 'Playfair Display', serif
+$top-nav-height : 60px
+
+a
+  &:focus
+    outline : none
+    border  : none
+
+html
+  background : #fff
+  overflow-y : auto
+
+.app
+  @extend .columns
+  @extend .is-gapless
+  height: 100vh
+  overflow: hidden
+  font-family: $font-main
+  font-size: 14px
+
+.left-pane
+  @extend .column
+  @extend .is-3
+  overflow-y: hidden
+  height: 100vh
+
+.right-pane
+  @extend .column
+  @extend .is-9
+  overflow-y: auto
+  height: 100vh
+
+  .view
+    padding: 10% 20px 20px 20px
+
+ol.creatures
+  list-style-type: none
+  overflow-y: scroll
+  height: 90%
+
+  li
+    padding: 10px
+
+    &:hover
+      cursor: pointer
+      background: #f1f1f1
+
+    span.level
+      padding-right: 10px
+      display: inline-block
+      margin: 0px
+
+.searchBar
+  padding: 20px 10px
+  border-bottom: 1px solid #f1f1f1
+
+  input
+    border: 1px solid #ccc
+    padding: 5px
+
+
+ol.filters
+  list-style-type: none
+  display: inline-block
+
+  li
+    display: inline-block
+    padding: 5px 7px
+    &:hover
+      cursor: pointer
+
+    &.filter-on
+      background: $green
+      color: #f1f1f1
+
+    &.filter-off
+      background: #f1f1f1
