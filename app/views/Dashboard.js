@@ -98,7 +98,7 @@ export default class Dashboard {
     }
 
     delete this.filters.level
-    console.log(evt.target.value)
+    // TODO: lunr search
   }
 
   static undead (creature) {
@@ -107,10 +107,8 @@ export default class Dashboard {
 
   static level (str) {
     const [min, max] = str.split("-").map(Number).sort( (a,b)=> a - b )
-    return function between (creature) {
-      return creature.level == min || creature.level === max || (creature.level < max && creature.length > min)
-    }
-
+    return creature => creature.level <= max && creature.level >= min
+    
   }
 
 
