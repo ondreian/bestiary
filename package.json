@@ -12,7 +12,7 @@
     "build:prod": "brunch build --production",
     "build:dev": "brunch build",
     "deploy:gh": "git add . && git commit -m 'deployment' && git subtree push --prefix public origin gh-pages",
-    "pre:deploy:gh": "npm run build:prod"
+    "predeploy:gh": "npm run build:prod"
   },
   "dependencies": {
     "bluebird": "^3.4.1",
