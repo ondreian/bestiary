@@ -72,13 +72,18 @@ export default class Dashboard {
     const content = !creature
       ? m("h1", "please select a monster")
       : bulma.content([
-            m("h1.name", creature.name)
-          , m("h2.level", creature.level)
-          , m("h3.habitats", creature.habitats)
+            m("h1", 
+                m(`span${styles.creatureLevel()}`, creature.level)
+              , m(`span${styles.creature()}`, creature.name)
+              
+            )
+          , m("h2", creature.tags.join(", "))
+          , m("h3.habitats", creature.habitats.join(", "))
           , m("p.description", creature.description)
           , m(`ol${styles.rooms()}`,  (creature.rooms || []).filter( room => room ).map( room => {
               return m(`li`, room)
-          }))
+            }))
+          , m(`a[href=${creature.article}]`, "more")
         ])
 
     return content
@@ -94,6 +99,7 @@ export default class Dashboard {
     this.index     = lunr(function () {
       this.field('name', { boost: 10 })
       this.field('tags', { boost: 20 })
+      this.field('habitats', { boost: 30 })
       this.field('description')
       this.ref('name')
     })
