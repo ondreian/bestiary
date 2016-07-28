@@ -130,6 +130,7 @@ export default class Dashboard {
     if (evt.target.value == "") {
       delete this.filters.lunr
       delete this.filters.level
+      return
     }
 
     if (evt.target.value.match(LEVEL_RANGE)) {
