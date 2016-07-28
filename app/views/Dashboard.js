@@ -35,7 +35,7 @@ export default class Dashboard {
   static searchBar (ctrl) {
     return bulma.searchBar(
         m("input[type=search]", {
-            oninput: onlyEvery(250, (evt) => ctrl.search(evt))
+            oninput: (evt) => ctrl.search(evt)
           , config : (ele, isInitialized, ctx) => {
               if (isInitialized) return true
               ctx.retain = true
