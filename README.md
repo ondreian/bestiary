@@ -1,7 +1,15 @@
-# Bestiary
+## Gemstone Bestiary Search
 
-This is the bestiary for Gemstone IV and the world of Elanthia
+![Screenshot](screen-shot.png)
 
-It lives [here](https://bestiary.symboli.se)
+--- 
+### [Search the Bestiary](https://gemstone-beasties.netlify.app/)
+---
 
-If there is a problem please open an issue on Github with an explaination or screenshot
+A simple, faceted, Instantsearch page for searching against creature data scraped from the [Gemstone IV Wiki](https://gswiki.play.net/Category:Creatures_by_Level). Built with Jekyll, Vite, and Instantsearch.js 
+
+### TODO
+
+* Add portal zone info
+* Remove ancient period spacing in description blocks
+* Slugify area names and add in Links to area wiki pages

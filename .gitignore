@@ -9,6 +9,9 @@
 *.vi
 *~
 *.sass-cache
+.jekyll-cache
+.jekyll-metadata
+.byebug_history
 
 # OS or Editor folders
 .DS_Store
