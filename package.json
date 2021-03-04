@@ -1,36 +1,16 @@
 {
-  "name": "bestiary.symboli.se",
-  "description": "Bestiary for Elanthia",
-  "author": "Benjamin Clos",
-  "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ondreian/i.am.benjaminclos.com.git"
-  },
+  "name": "bestiary",
+  "version": "0.0.0",
   "scripts": {
-    "start": "brunch watch --server",
-    "build:prod": "brunch build --production",
-    "build:dev": "brunch build",
-    "deploy:gh": "git add . && git commit -m 'deployment' && git subtree push --prefix public origin gh-pages",
-    "predeploy:gh": "npm run build:dev"
-  },
-  "dependencies": {
-    "bluebird": "^3.4.1",
-    "bulma": "^0.1.0",
-    "lunr": "^0.7.1",
-    "mithril": "^0.2.5"
+    "jekyll": "bundle exec jekyll build",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "devDependencies": {
-    "auto-reload-brunch": "^2.0.0",
-    "babel-brunch": "~6.0.0",
-    "babel-plugin-pipe-operator": "^1.0.0",
-    "babel-plugin-transform-class-properties": "^6.10.2",
-    "babel-preset-es2015": "~6.3.13",
-    "brunch": "^2.4.0",
-    "clean-css-brunch": "^2.0.0",
-    "css-brunch": "^2.0.0",
-    "javascript-brunch": "^2.0.0",
-    "sass-brunch": "^2.6.3",
-    "uglify-js-brunch": "^2.0.0"
+    "algoliasearch": "^4.8.5",
+    "bulma": "^0.9.2",
+    "instantsearch.js": "^4.15.0",
+    "vite": "^2.0.1"
   }
 }

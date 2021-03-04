@@ -1,0 +1,4 @@
+# Build settings
+exclude:
+  - scraper.rb
+  - readme.md
