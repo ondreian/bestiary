@@ -13,6 +13,7 @@
 .jekyll-metadata
 .byebug_history
 
+
 # OS or Editor folders
 .DS_Store
 .cache
@@ -21,6 +22,7 @@
 .tmproj
 nbproject
 Thumbs.db
+_site
 
 # NPM packages folder.
 node_modules/
